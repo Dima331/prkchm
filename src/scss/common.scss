@@ -1,0 +1,10 @@
+// Заголовки, общие БЄМ блоки и проче...
+.list {
+  @extend %listCounter;
+  color: red;
+  font-size: 30px;
+
+  li {
+    padding-left: 30px;
+  }
+}
