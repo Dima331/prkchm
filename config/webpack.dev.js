@@ -111,14 +111,21 @@ const config = {
 				use: [
 					{
 						loader: 'pug-loader'
-					}, {
+					},
+					{
 						loader: 'string-replace-loader',
 						options: {
 							search: '@img',
 							replace: 'img',
 							flags: 'g'
 						}
-					}
+					},
+					// {
+					// 	loader: 'html-loader'
+					// },
+					{
+						loader: 'pug-html-loader'
+					},
 				]
 			}
 		],

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 html(lang='ru')
   - var title = "пркчм";
-  include common/head.pug
+  include html/common/_head.pug 
   body
     .wrapper
-      header.header 
+      //- header.header 
+      include html/common/_header.pug
       main.page 
       footer.footer 
