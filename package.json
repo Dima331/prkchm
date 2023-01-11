@@ -72,7 +72,9 @@
 	},
 	"dependencies": {
 		"gulp-cheerio": "^1.0.0",
+		"html-loader": "^4.2.0",
 		"intl-tel-input": "^17.0.19",
+		"pug-html-loader": "^1.1.5",
 		"simplebar": "latest"
 	}
 }
