@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: rem(12);
+
+  .social__item {
+    display: flex;
+  }
+
+  .social__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.social_header {
+  .social__link {
+    @media (max-width: $mobileSmall) {
+      padding: rem(17);
+      border-radius: 50%;
+      background-color: $extraColor;
+
+      svg {
+        stroke: $mainColor;
+      }
+    }
+  }
+}

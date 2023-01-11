@@ -25,7 +25,6 @@ html,
 body {
 	height: 100%;
 	min-width: $minWidth + px;
-	background-color: grey;
 }
 
 body {
@@ -67,6 +66,12 @@ a:visited {
 
 a:hover {
 	text-decoration: none;
+	opacity: 0.7;
+}
+
+a:active {
+	text-decoration: none;
+	opacity: 0.4;
 }
 
 ul li {

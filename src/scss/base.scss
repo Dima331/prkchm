@@ -40,6 +40,12 @@
 // Стили для отзывчивых картинок (IBG)
 // Сниппет (HTML): ibg (div c картинкой и классами)
 // Сниппет (HTML): ibga (a c картинкой и классами)
+
+@import "components/menu";
+@import "components/social";
+@import "components/number";
+@import "components/logo";
+
 [class*="-ibg"] {
 	position: relative;
 
@@ -152,6 +158,10 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+
+%inf {
+	font-family: Inter;
 }
 
 .visually-hidden:not(:focus):not(:active),

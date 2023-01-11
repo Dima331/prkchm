@@ -1,0 +1,7 @@
+.number {
+  font-weight: 700;
+
+  @media (max-width: $mobile) {
+    font-size: rem(22);
+  }
+}
