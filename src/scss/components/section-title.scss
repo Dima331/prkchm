@@ -1,0 +1,16 @@
+.section-title {
+    font-size: rem(32);
+    font-weight: 700;
+    line-height: 115%;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 50, 32);
+}
+
+.section-title_large {
+    font-size: rem(58);
+    @include adaptiveValue("font-size", 81, 58);
+    
+    @media (max-width: $mobile) {
+        text-align: center;
+    }
+}

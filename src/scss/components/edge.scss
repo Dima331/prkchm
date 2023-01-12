@@ -1,0 +1,17 @@
+.edge{
+    display: flex;
+    
+    .edge__icon{
+        flex: 0 0 rem(40);
+        width: rem(40);
+        height: rem(50);
+        background-image: url('@img/subtract.svg');
+        background-repeat: no-repeat;
+        margin-right: rem(34);
+    }
+    .edge__text {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: rem(-4);
+    }
+}
