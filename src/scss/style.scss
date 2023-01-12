@@ -52,6 +52,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+	line-height: 145%;
 
 	// Скролл заблокирован
 	.lock & {

@@ -41,6 +41,7 @@
       right: -100%;
       transition: right 0.3s ease 0s, background-color 0.6s ease 0.5s;
       background-color: rgba($color: $mainColor, $alpha: 0);
+      z-index: 5;
 
       .menu-open & {
         right: 0;
