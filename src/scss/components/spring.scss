@@ -1,0 +1,129 @@
+.spring {
+  padding-bottom: rem(74);
+  height: 100%;
+  width: 100%;
+  margin-bottom: rem(40);
+}
+
+.spring__content {
+  padding-left: rem(20);
+  padding-bottom: rem(18);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: rem(235);
+}
+
+.spring__body {
+  width: rem(338);
+  height: rem(338);
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  flex-direction: column;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: rem(1) solid $mainColor;
+    bottom: rem(-35);
+    border-radius: 50%;
+  }
+
+  &::before {
+    bottom: rem(-73);
+  }
+
+  .spring__text {
+    color: $extraColor;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+.spring__link {
+  width: rem(34);
+  height: rem(7);
+  background-image: url('@img/arrow.svg');
+  padding: rem(20);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circle-point {
+  max-width: rem(800);
+}
+
+.circle-point__list {
+  list-style-type: none;
+  counter-reset: item;
+  display: grid;
+  grid-template-columns: 1fr rem(20) 1fr rem(20) 1fr;
+  grid-template-rows: 1fr;
+}
+
+.spring_point {
+  padding-bottom: 0;
+  padding-top: rem(74);
+  width: rem(280);
+  height: rem(280);
+  box-sizing: content-box;
+
+  &:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  &:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 5;
+  }
+
+  &:nth-child(3) {
+    grid-area: 1 / 4 / 2 / 6;
+  }
+
+  .spring__content {
+    padding-bottom: rem(11);
+    padding-left: rem(26);
+    min-height: rem(117);
+
+    &:before {
+      color: $extraColor;
+      counter-increment: item;
+      content: "0"counter(item)".";
+      margin-bottom: rem(10);
+      line-height: 1;
+    }
+  }
+
+
+  .spring__body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .spring__body {
+
+    &::after,
+    &::before {
+      bottom: auto;
+    }
+
+    &::after {
+      top: rem(-30);
+    }
+
+    &::before {
+      top: rem(-60);
+    }
+  }
+}
