@@ -1,14 +1,54 @@
 //<BUTTONS (a.btn+tab)>
 // Снипет (HTML): btn
-
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: rem(24) rem(60);
+	line-height: 140%;
+	background-color: $mainColor;
+	color: $extraColor;
+	transition: all 0.4s;
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #333333;
+		}
+
+		&:active {
+			background-color: $mainColor;
+		}
+
+		&:disabled {
+			background-color: #666666;
+			color: #C2C2C2;
+			cursor: auto;
 		}
 	}
+
 	&._fw {
 		width: 100%;
+	}
+}
+
+.button_extra {
+	background-color: $extraColor;
+	color: $mainColor;
+	padding: rem(23) rem(59);
+	border: rem(1) solid $mainColor;
+
+	&:hover {
+		background-color: $mainColor;
+		color: $extraColor;
+	}
+
+	&:active {
+		background-color: $extraColor;
+		color: $mainColor;
+	}
+
+	&:disabled {
+		background-color: #F5F5F5;
+		color: #626262;
+		border: rem(1) solid #666;
+		cursor: auto;
 	}
 }
