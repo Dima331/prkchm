@@ -1,0 +1,23 @@
+.tip {
+  display: flex;
+
+  .tip__icon {
+    font-size: rem(24);
+    background-color: $mainColor;
+    border-radius: 50%;
+    color: $extraColor;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: rem(32);
+    height: rem(32);
+    @include adaptiveValue("flex-basis", 64, 32);
+    @include adaptiveValue("height", 64, 32);
+    @include adaptiveValue(" font-size", 48, 24);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 700;
+    margin-right: rem(12);
+    @include adaptiveValue("margin-right", 24, 12);
+  }
+}
