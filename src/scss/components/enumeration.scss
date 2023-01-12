@@ -1,0 +1,86 @@
+.enumeration {
+    max-width: 800px;
+    margin-bottom: 60px;
+
+    .enumeration__list {
+        display: flex;
+        flex-direction: row;
+        counter-reset: item;
+
+        .enumeration__item {
+            &:first-child {
+                .enumeration__text {
+                    padding-left: 0;
+                    border-left: none;
+                }
+            }
+        }
+    }
+
+    .enumeration__item {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .enumeration__text {
+        padding: rem(34) rem(40);
+        border: 1px solid $mainColor;
+        border-right: none;
+        height: 100%;
+
+        text-transform: uppercase;
+        font-weight: 700;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+            }
+        }
+    }
+
+    .enumeration__title {
+        line-height: 1;
+        font-weight: 700;
+        color: $extraColor;
+        text-transform: uppercase;
+        background-color: $mainColor;
+        display: inline-block;
+        padding: rem(6) rem(17);
+
+        &:before {
+            counter-increment: item;
+            content: "0" counter(item);
+            line-height: 1;
+        }
+    }
+}
+
+
+.enumeration_client {
+    .enumeration__item {
+        flex: auto;
+
+        .enumeration__title {
+            &:before {
+                content: "";
+            }
+        }
+
+        .enumeration__text {
+            text-transform: none;
+            font-weight: 400;
+        }
+
+        &:first-child {
+            max-width: rem(560);
+
+            .enumeration__text {
+                padding-left: 0;
+                padding-right: rem(100);
+                border-left: none;
+            }
+        }
+    }
+}
