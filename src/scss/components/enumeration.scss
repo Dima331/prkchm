@@ -1,6 +1,4 @@
 .enumeration {
-    max-width: 800px;
-
     @media (max-width: em(830)) {
         max-width: inherit;
     }
@@ -31,7 +29,7 @@
         flex: 1;
 
         @media (max-width: em(830)) {
-            &:first-child {
+            &:not(:last-child) {
                 .enumeration__text {
                     border-bottom: none;
                 }
@@ -80,6 +78,7 @@
 
 
 .enumeration_client {
+    max-width: 800px;
     .enumeration__item {
         flex: auto;
         display: grid;

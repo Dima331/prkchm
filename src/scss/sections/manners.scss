@@ -1,0 +1,56 @@
+.manners {
+    .manners__container {
+      display: grid;
+      grid-template-areas:
+        '. thought'
+        '. title'
+        '. enumeration'
+        '. tip'
+      ;
+      padding: rem(35) rem(15);
+      gap: 32px;
+      grid-template-columns: minmax(200px, 376px) 1fr;
+
+      @media (max-width: em(1246)) {
+        grid-template-areas:
+        '. thought .'
+        '. title .'
+        '. enumeration . '
+        '. tip .'
+        ;
+        grid-template-columns:1fr  minmax(500px, 800px) 1fr;
+        
+        // grid-template-rows: auto 1fr auto auto;
+        gap: 28px;
+      }
+  
+      @media (max-width: em(830)) {
+        grid-template-areas:
+        'thought '
+        'title '
+        'enumeration  '
+        'tip '
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        // align-items: center;
+        // justify-items: center;
+        padding: rem(30) rem(15);
+      }
+    }
+
+    .manners__thought {
+        grid-area: thought;
+    }
+    .manners__title{
+        grid-area: title;
+    }
+
+    .manners__enumeration {
+        grid-area: enumeration;
+    }
+
+    .manners__tip {
+        grid-area: tip;
+    }
+}
