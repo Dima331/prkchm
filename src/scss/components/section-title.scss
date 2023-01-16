@@ -7,10 +7,10 @@
 }
 
 .section-title_large {
-    font-size: rem(58);
-    @include adaptiveValue("font-size", 81, 58);
-    
-    @media (max-width: $mobile) {
+    font-size: rem(54);
+    @include adaptiveValue("font-size", 81, 54);
+
+    @media (max-width: em(830)) {
         text-align: center;
     }
 }

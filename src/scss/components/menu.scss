@@ -2,9 +2,13 @@
   .menu__list {
     display: flex;
     flex-direction: row;
-    gap: rem(20);
+    gap: rem(48);
     justify-content: center;
     flex-wrap: wrap;
+
+    @media (max-width: em(800)) {
+      gap: rem(30);
+    }
 
     @media (max-width: $mobile) {
       flex-direction: column;

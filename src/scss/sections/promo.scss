@@ -1,0 +1,106 @@
+.promo {
+  .promo__container {
+    display: grid;
+    grid-template-areas:
+      'pic tip'
+      'pic title'
+      'pic circles'
+      'pic enumeration'
+    ;
+    padding: rem(65) rem(15);
+    gap: 32px;
+
+    @media (max-width: em(1246)) {
+      grid-template-areas:
+        'pic tip'
+        'pic title'
+        'circles circles'
+        'enumeration enumeration'
+      ;
+      grid-template-columns: minmax(376px, 1fr) 1fr;
+      grid-template-rows: auto 1fr auto auto;
+      gap: 28px;
+    }
+
+    @media (max-width: em(830)) {
+      grid-template-areas:
+        'tip'
+        'title'
+        'pic'
+        'circles'
+        'enumeration'
+      ;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      justify-items: center;
+      padding: rem(30) rem(15);
+    }
+  }
+
+  .promo__tip {
+    display: flex;
+    padding-top: 46px;
+    grid-area: pic;
+    justify-self: self-end;
+
+    @media (max-width: em(830)) {
+      justify-self: center;
+    }
+  }
+
+  .promo__img {
+    position: relative;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      margin-left: -91.5px;
+      width: rem(183);
+      height: rem(183);
+      background: url('@img/promo/perfect.svg') 0 0 no-repeat;
+      animation: rotating 35s linear infinite;
+    }
+
+    img {
+      z-index: 1;
+
+      @media (max-width:$mobileSmall) {
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+
+  .promo__thought {
+    grid-area: tip;
+  }
+
+  .promo__section-title {
+    grid-area: title;
+  }
+
+  .promo__circle-point {
+    grid-area: circles;
+    justify-self: center;
+  }
+
+  .promo__enumeration {
+    grid-area: enumeration;
+    justify-self: center;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

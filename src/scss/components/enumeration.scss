@@ -1,11 +1,18 @@
 .enumeration {
     max-width: 800px;
-    margin-bottom: 60px;
+
+    @media (max-width: em(830)) {
+        max-width: inherit;
+    }
 
     .enumeration__list {
         display: flex;
         flex-direction: row;
         counter-reset: item;
+
+        @media (max-width: em(830)) {
+            flex-direction: column;
+        }
 
         .enumeration__item {
             &:first-child {
@@ -22,6 +29,14 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+
+        @media (max-width: em(830)) {
+            &:first-child {
+                .enumeration__text {
+                    border-bottom: none;
+                }
+            }
+        }
     }
 
     .enumeration__text {
@@ -29,9 +44,15 @@
         border: 1px solid $mainColor;
         border-right: none;
         height: 100%;
-
         text-transform: uppercase;
         font-weight: 700;
+        width: 100%;
+
+        @media (max-width: em(830)) {
+            border-right: none;
+            border-left: none;
+            padding-left: 0;
+        }
 
         p {
             &:not(:last-child) {
@@ -51,7 +72,7 @@
 
         &:before {
             counter-increment: item;
-            content: "0" counter(item);
+            content: "0"counter(item);
             line-height: 1;
         }
     }
@@ -61,6 +82,11 @@
 .enumeration_client {
     .enumeration__item {
         flex: auto;
+        display: grid;
+        flex-direction: column;
+        grid-template-rows: 1fr auto;
+        justify-items: start;
+        align-items: end;
 
         .enumeration__title {
             &:before {
@@ -74,11 +100,20 @@
         }
 
         &:first-child {
-            max-width: rem(560);
+            max-width: rem(538);
+
+            @media (max-width: em(830)) {
+                max-width: inherit;
+            }
 
             .enumeration__text {
                 padding-left: 0;
                 padding-right: rem(100);
+
+                @media (max-width: em(830)) {
+                    padding: rem(34) rem(40);
+                }
+
                 border-left: none;
             }
         }
