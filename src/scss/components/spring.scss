@@ -2,6 +2,12 @@
   padding-bottom: rem(74);
   height: 100%;
   width: 100%;
+
+  @media (max-width: em(1246)) { ///
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .spring__content {
@@ -23,6 +29,11 @@
   border-radius: 50%;
   position: relative;
   flex-direction: column;
+
+  @media (max-width: $mobile) {
+    width: rem(300);
+    height: rem(300);
+  }
 
   &::after,
   &::before {
@@ -123,7 +134,7 @@
     &:before {
       color: $extraColor;
       counter-increment: item;
-      content: "0"counter(item)".";
+      content: "0" counter(item)".";
       margin-bottom: rem(10);
       line-height: 1;
     }
