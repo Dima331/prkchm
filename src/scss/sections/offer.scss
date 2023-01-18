@@ -7,30 +7,30 @@
         ;
         padding: rem(35) rem(15);
         gap: 32px;
-        grid-template-columns: minmax(338px, 376px) 1fr;
+        grid-template-columns: minmax(338px, 383px) 1fr;
         //   grid-template-columns: 1fr;
 
-          @media (max-width: em(1246)) {
+        @media (max-width: em(1246)) {
             grid-template-areas:
-            '. tip .'
-            '. title .'
-            '. list . '
+                '. tip .'
+                '. title .'
+                '. list . '
             ;
-            grid-template-columns:1fr  minmax(500px, 800px) 1fr;
+            grid-template-columns: 1fr minmax(500px, 800px) 1fr;
             justify-content: center;
             gap: 28px;
-          }
+        }
 
-          @media (max-width: em(830)) {
+        @media (max-width: em(830)) {
             grid-template-areas:
-            'tip'
-            'title'
-            'list'
+                'tip'
+                'title'
+                'list'
             ;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
             padding: rem(30) rem(15);
-          }
+        }
     }
 
     .offer__tip {
@@ -47,17 +47,20 @@
     }
 
     .offer__item {
-        padding: rem(30) rem(80) rem(30) 0 ;
+        padding: rem(30) rem(80) rem(30) 0;
         border-top: 1px solid $mainColor;
         display: flex;
         gap: 16px;
+
         &:last-child {
             border-bottom: 1px solid $mainColor;
         }
+
         @media (max-width: em(830)) {
-            padding: rem(30) 0 rem(30) 0 ;
+            padding: rem(30) 0 rem(30) 0;
         }
-        .offer__icon{
+
+        .offer__icon {
             background-image: url('@img/check.svg');
             background-repeat: no-repeat;
 
