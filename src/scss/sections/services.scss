@@ -1,0 +1,251 @@
+.services {
+  padding: rem(150) 0;
+}
+
+// .services__container {
+//   position: relative;
+// }
+
+.services__list {
+  display: grid;
+  grid-template-areas:
+    '. one one two two .'
+    'three three four four five five'
+    '. six six seven seven .'
+  ;
+  align-items: center;
+  justify-content: center;
+  padding: rem(60) 0 rem(100);
+  position: relative;
+  margin-bottom: rem(60);
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: rem(70);
+    background-image: url('@img/total.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: rem(-10);
+  }
+
+  @media (max-width: em(1246)) {
+    position: relative;
+
+    grid-template-areas:
+      'one one two two'
+      'three three four four'
+      'five five six six'
+      '. seven seven .'
+    ;
+
+    &:after {
+      background-size: contain;
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(800);
+    }
+  }
+
+  @media (max-width: em(830)) {
+    grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five'
+      'six'
+      'seven'
+    ;
+
+    &:after {
+      width: rem(400);
+
+    }
+  }
+
+  @media (max-width:$mobileSmall) {
+    &:after {
+      height: rem(20);
+      bottom: 0;
+      width: rem(300);
+      background-image: url('@img/total-b.svg');
+    }
+  }
+
+}
+
+$nums: one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven;
+
+.services__item {
+  width: rem(385);
+  height: rem(333);
+  padding: rem(59) 0 0 rem(95);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: $mainColor;
+
+  @media (max-width: em(1246)) {
+    width: rem(340);
+    height: rem(333);
+    padding: rem(59) 0 0 rem(67);
+  }
+
+  @media (max-width:$mobileSmall) {
+    width: rem(338);
+    height: rem(266);
+    padding: rem(50) 0 0 rem(81);
+  }
+
+  &::after {
+    content: '';
+    width: rem(446);
+    height: rem(446);
+
+    @media (max-width: em(1246)) {
+      width: rem(400);
+      height: rem(400);
+    }
+
+    @media (max-width:$mobileSmall) {
+      width: rem(300);
+      height: rem(300);
+    }
+
+    border: 1px solid $mainColor;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      background-color: $mainColor;
+      transition: all 0.5s;
+    }
+
+    .services__title,
+    .service {
+      color: $extraColor;
+      z-index: 1;
+    }
+  }
+
+  @each $num in $nums {
+    $i: index($nums, $num);
+
+    &:nth-child(#{$i}) {
+      grid-area: $num;
+    }
+  }
+}
+
+.service__item {
+  @media (max-width:$mobileSmall) {
+    display: inline-flex;
+    margin-right: rem(10);
+  }
+}
+
+.services__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: rem(25);
+  line-height: 125%;
+  margin-bottom: rem(14);
+  padding-right: rem(75);
+  letter-spacing: rem(1);
+
+  @media (max-width:$mobileSmall) {
+    font-size: rem(18);
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: rem(6);
+  padding-right: rem(60);
+
+  @media (max-width:$mobileSmall) {
+    font-size: rem(16);
+    display: block;
+  }
+}
+
+.service__text {
+  text-decoration: underline;
+}
+
+.services__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services__tagline {
+  font-size: rem(26);
+  line-height: 115%;
+  font-weight: 700;
+  text-transform: uppercase;
+  @include adaptiveValue("font-size", 50, 26);
+  @include adaptiveValue("width", 600, 290, 1216, 320);
+  width: 290px;
+  p {
+    &:nth-child(2){
+      margin-left: 38%;
+    }
+    &:nth-child(3){
+      margin-left: 20%;
+    }
+    &:nth-child(4){
+      margin-left: 30%;
+    }
+  }
+}
+
+.services__presentation {
+  line-height: 140%;
+  color: $extraColor;
+  width: rem(208);
+  height: rem(208);
+  border-radius: 50%;
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 20px;
+  text-align: center;
+
+  span {
+    padding: 0 0 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 35px;
+      height: 7px;
+      position: absolute;
+      background-image: url('@img/arrow.svg');
+      background-repeat: no-repeat;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+    }
+  }
+}
