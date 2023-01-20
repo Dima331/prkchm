@@ -106,6 +106,142 @@ function initSliders() {
 			}
 		});
 	}
+
+	if (document.querySelector('.portfolio__slider_one')) {
+
+		new Swiper('.portfolio__slider_one', {
+
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			loop: true,
+			loopedSlides: "3",
+
+			pagination: {
+				el: '.portfolio__pagination_one',
+				type: "fraction",
+			},
+
+			navigation: {
+				prevEl: '.portfolio__prev_one',
+				nextEl: '.portfolio__next_one',
+			},
+			breakpoints: {
+				830: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+	if (document.querySelector('.portfolio__slider_two')) {
+
+		new Swiper('.portfolio__slider_two', {
+
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			loop: true,
+			loopedSlides: "3",
+
+			pagination: {
+				el: '.portfolio__pagination_two',
+				type: "fraction",
+			},
+
+			navigation: {
+				prevEl: '.portfolio__prev_two',
+				nextEl: '.portfolio__next_two',
+			},
+			breakpoints: {
+				830: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+	if (document.querySelector('.portfolio__slider_three')) {
+
+		new Swiper('.portfolio__slider_three', {
+
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			loop: true,
+			loopedSlides: "3",
+
+			pagination: {
+				el: '.portfolio__pagination_three',
+				type: "fraction",
+			},
+
+			navigation: {
+				prevEl: '.portfolio__prev_three',
+				nextEl: '.portfolio__next_three',
+			},
+			breakpoints: {
+				830: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+	if (document.querySelector('.portfolio__slider_four')) {
+
+		new Swiper('.portfolio__slider_four', {
+
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			loop: true,
+			loopedSlides: "3",
+
+			pagination: {
+				el: '.portfolio__pagination_four',
+				type: "fraction",
+			},
+
+			navigation: {
+				prevEl: '.portfolio__prev_four',
+				nextEl: '.portfolio__next_four',
+			},
+			breakpoints: {
+				830: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
+	if (document.querySelector('.portfolio__slider_five')) {
+
+		new Swiper('.portfolio__slider_five', {
+
+			modules: [Navigation, Pagination],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			loop: true,
+			loopedSlides: "3",
+
+			pagination: {
+				el: '.portfolio__pagination_five',
+				type: "fraction",
+			},
+
+			navigation: {
+				prevEl: '.portfolio__prev_five',
+				nextEl: '.portfolio__next_five',
+			},
+			breakpoints: {
+				830: {
+					spaceBetween: 25,
+				},
+			},
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

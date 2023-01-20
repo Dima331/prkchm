@@ -216,3 +216,37 @@
     }
   }
 }
+
+.slider-navigation_portfolio {
+  border: none;
+  border-top: 1px solid $mainColor;
+  justify-content: end;
+  color: $extraColor;
+  font-weight: 700;
+
+
+  .slider-navigation__panel {
+    background-color: $mainColor;
+    padding: rem(2) 0;
+
+    @media (max-width:$mobileSmall) {
+      padding: 0 rem(10);
+    }
+  }
+
+  .slider-navigation__btn {
+    background-image: url('@img/arrow.svg');
+    width: rem(55);
+    transform: rotate(180deg);
+
+    @media (max-width:$mobileSmall) {
+      display: none;
+    }
+
+
+  }
+
+  .slider-navigation__btn_next {
+    transform: rotate(0);
+  }
+}
