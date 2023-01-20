@@ -1,10 +1,110 @@
-.carousel-title__list{
-    display: flex;
-    gap: 50px;
+.carousel-title {
+    padding: rem(40) 0;
+    border-top: 1px solid $mainColor;
 }
+
+.carousel-title__list {
+    display: flex;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    animation: scroll 60s linear infinite;
+}
+
 .carousel-title__item {
-    font-size: 70px;
+    font-size: rem(32);
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 115%;
+    line-height: 0.8;
+    @include adaptiveValue("font-size", 70, 32);
+
+    background-image: url('@img/subtract.svg');
+    background-repeat: no-repeat;
+    background-position: right 5% center;
+    background-size: contain;
+    flex: 0 0 auto;
+    padding-right: rem(44);
+    @include adaptiveValue("padding-right", 95, 44);
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.carousel-title__top {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    margin-bottom: rem(10);
+    @include adaptiveValue("margin-bottom", 40, 10);
+}
+
+.carousel-title__bottom {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+
+    .carousel-title__list {
+        animation: scroll 80s linear infinite;
+        animation-direction: reverse;
+    }
+
+    .carousel-title__item {
+        font-size: rem(18);
+        font-weight: 400;
+        text-transform: none;
+        line-height: 145%;
+        background: none;
+        padding-right: rem(120);
+        position: relative;
+
+        &:after {
+            content: '';
+            background-color: $mainColor;
+            width: rem(84);
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: rem(17);
+            transform: translateY(-50%);
+
+        }
+    }
+
+    .carousel-title__link {
+        text-decoration: underline;
+        transition: all 0.3s;
+
+        &:hover {
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100%));
+    }
+}
+
+.carousel-title__bottom_pause:hover .carousel-title__list {
+    animation-play-state: paused;
+}
+
+
+.carousel-title__top_large {
+    .carousel-title__list {
+        animation: scroll 80s linear infinite;
+    }
+
+    .carousel-title__item {
+        background-position: right 3% center;
+    }
+
 }
