@@ -1,17 +1,24 @@
-.edge{
+.edge {
     display: flex;
-    
-    .edge__icon{
+
+    .edge__icon {
         flex: 0 0 rem(40);
-        width: rem(40);
-        height: rem(50);
+        width: rem(24);
+        height: rem(40);
         background-image: url('@img/subtract.svg');
+        background-position: left;
         background-repeat: no-repeat;
-        margin-right: rem(34);
+        @include adaptiveValue("margin-right", 34, 14);
+        margin-right: rem(14);
+        @include adaptiveValue("width", 40, 24);
+        @include adaptiveValue("height", 50, 40);
     }
+
     .edge__text {
         font-weight: 700;
         text-transform: uppercase;
-        margin-top: rem(-4);
+        margin-top: rem(-2);
+        @include adaptiveValue("font-size", 18, 16);
+        font-size: rem(16);
     }
 }
