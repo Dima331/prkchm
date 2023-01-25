@@ -1,0 +1,111 @@
+.gratitude {
+    padding: rem(50) 0;
+
+    .gratitude__container {
+        display: grid;
+        grid-template-areas:
+            'edge slider'
+        ;
+        gap: rem(32);
+        grid-template-columns: minmax(200px, 383px) 1fr;
+
+        @media (max-width: em(1246)) {
+            grid-template-areas:
+                '. edge .'
+                '. slider . '
+            ;
+            grid-template-columns: 1fr minmax(500px, 800px) 1fr;
+            justify-content: center;
+            gap: rem(28);
+        }
+
+        @media (max-width: em(830)) {
+            grid-template-areas:
+                'edge'
+                'slider'
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+        }
+    }
+
+    .gratitude__edge {
+        grid-area: edge;
+        z-index: 2;
+    }
+
+    .gratitude__content {
+        min-width: 0;
+        width: 100%;
+        position: relative;
+        grid-area: slider;
+
+        &:before {
+            content: "";
+            height: 100%;
+            width: 100vw;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: -100vw;
+            z-index: 1;
+        }
+    }
+
+    .gratitude__slider {
+        overflow: inherit;
+    }
+
+    .gratitude__slide {
+        position: relative;
+
+        &:hover {
+            opacity: 1;
+
+            &::after {
+                transform: translate(-50%, -50%) scale(1.2);
+                transition: all 0.3s;
+            }
+        }
+
+        &:active {
+            opacity: 1;
+        }
+
+        &::after {
+            width: rem(45);
+            height: rem(45);
+            @include adaptiveValue("height", 58, 45);
+            @include adaptiveValue("width", 58, 45);
+            background-color: $mainColor;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-image: url('@img/eye.svg');
+            transition: all 0.3s;
+            content: '';
+            z-index: 2;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:before {
+            width: 100%;
+            height: 100%;
+            background-color: $mainColor;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            content: '';
+        }
+    }
+}
+
+.gratitude__slide__img {
+    height: 300px;
+    @include adaptiveValue("height", 544, 300);
+}

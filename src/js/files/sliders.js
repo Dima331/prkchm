@@ -322,6 +322,27 @@ function initSliders() {
 			},
 		});
 	}
+
+	if (document.querySelector('.gratitude__slider')) {
+
+		new Swiper('.gratitude__slider', {
+
+			modules: [],
+			observer: true,
+			observeParents: true,
+			spaceBetween: 8,
+			// loop: true,
+			// loopedSlides: "3",
+			// centeredSlides: true,
+			slidesPerView: "auto",
+			autoHeight: true,
+			breakpoints: {
+				830: {
+					spaceBetween: 32,
+				},
+			},
+		});
+	}
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
