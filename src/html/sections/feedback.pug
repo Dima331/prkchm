@@ -1,0 +1,48 @@
+-var type= 'feedback'
+
+section.feedback
+  .feedback__container
+    h2.feedback__title.section-title Расскажите нам о своём бизнесе
+    .feedback__thought.thought 
+      .thought__icon !
+      p.thought__text Мы проведём аудит, составим план комплексного продвижения с учётом ваших задач и бюджеиа, или представим #[br] единичные услуги, необходимые вашему бизнесу
+    .feedback__pic 
+      .feedback__pic
+        .feedback__img.feedback__img-ibg
+          img(src="@img/feedback/hand.png" alt="Расслабленный мужчина").feedback__img_contain
+    .feedback__thought
+    form.feedback__form.form(action="#" method="GET")
+      .form__inputs
+        .form__line
+          label(for="name").form__label
+            input(type="text" name="name" id="name" placeholder="Укажите ваше имя" required).form__input
+            span.form__text Ваше имя
+        .form__line
+          label(for="telephone").form__label
+            input(type="text" name="telephone" id="telephone" placeholder="Введите телефон" required).form__input
+            span.form__text Телефон для связи
+        .form__line
+          label(for="email").form__label
+            input(type="email" name="email" id="email" placeholder="Введите e-mail" required onkeyup="this.setAttribute('value', this.value);" value="").form__input.form__input_mail
+            span.form__text Электронная почта
+        .form__line
+          label(for="question").form__label
+            input(type="text" name="question" id="question" placeholder="Введите вопрос" required).form__input.form__input_question
+            span.form__text Задайте свой вопрос
+          label(for="file").form__file.file-form
+            input(autocomplete='off' accept='.jpg, .png' multiple='' id='file' name='file' type='file' hidden).visually-hidden
+            .file-form__body 
+              span.file-form__text Прикрепить файл
+              .file-form__icon 
+
+
+
+      .feedback__footer 
+        .feedback__social
+          include ../components/social.pug
+          .feedback__tip
+            p Если у вас срочный вопрос, вы можете  написать нам в мессенджерах
+        .feedback__submit
+          button(type="submit").button.feedback__btn Отправить заявку
+          .feedback__agreement
+            p Нажимая на кнопку «Отправить заявку» я соглашаюсь на обработку персональных данных
