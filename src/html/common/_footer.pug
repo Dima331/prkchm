@@ -1,0 +1,71 @@
+-var type= 'footer'
+
+footer.footer 
+  .footer__container
+    .footer__body
+      .footer__logo 
+        a(href="#").footer__link
+          img(src="@img/footer/logo.svg" alt="Логотип")
+      nav.footer__nav 
+        ul.nav-footer(data-spollers='820,max')
+          li.nav-footer__item 
+            //- a(href="#" data-spoller).nav-footer__title О нас
+            button(type="button" data-spoller='').nav-footer__title О нас
+            ul.nav-footer__sub-list
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Дайджест
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Преимущества
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Отзывы
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Реквизиты
+          li.nav-footer__item 
+            //- a(href="#").nav-footer__title Услуги
+            button(type="button" data-spoller='').nav-footer__title Услуги
+            ul.nav-footer__sub-list
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Создание контента
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Разработка дизайна
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Разработка и продвижение сайтов
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Создание мерча
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Изготовление эксклюзива
+          li.nav-footer__item 
+            //- a(href="#").nav-footer__title Кейсы
+            button(type="button" data-spoller='').nav-footer__title Кейсы
+            ul.nav-footer__sub-list
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Создание контента
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Разработка дизайна
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Разработка и продвижение сайтов
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Создание мерча
+              li.nav-footer__sub-item
+                a(href="#").nav-footer__sub-link Изготовление эксклюзива
+          li.nav-footer__item 
+            a(href="#").nav-footer__title Контакты
+      .footer__location
+        .footer__media
+          include ../components/social.pug
+          a(href="mailto:info@improve.promo").footer__email info@improve.promo
+        .footer__adress 
+          p Москва, Волоколамское шоссе, д. 2, офисы 23, 24
+        .footer__work   
+          .footer__tel 
+            a(href="tel:+7 (495) 999 99 99") +7 (495) 999 99 99
+          .footer__time 
+            p Пн – Пт с 9:00 до 19:00
+    .footer__under 
+      .footer__rights 
+        p Copyright © 2022
+        p Все права защищены
+      .footer__policy
+        a(href="#") Политика #[br]конфиденциальности
+      .footer__agreement 
+        a(href="#") Согласие на обработку #[br]персональных данных

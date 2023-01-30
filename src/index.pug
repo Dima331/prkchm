@@ -2,23 +2,23 @@
 html(lang='ru')
   - var title = "пркчм";
   include html/common/_head.pug 
-  body
+  body(data-simplebar)
     .wrapper
       include html/common/_header.pug
       main.page 
         h1.visually-hidden Официальный сайт пркчм
-        //- include html/sections/promo.pug
-        //- include html/sections/manners.pug
-        //- include html/sections/offer.pug
-        //- include html/sections/provocation.pug
-        //- include html/sections/services.pug
-        //- include html/sections/portfolio.pug
-        //- include html/sections/geography.pug
-        //- include html/sections/digest.pug
-        //- include html/sections/work.pug
-        //- include html/sections/reviews.pug
+        include html/sections/promo.pug
+        include html/sections/manners.pug
+        include html/sections/offer.pug
+        include html/sections/provocation.pug
+        include html/sections/services.pug
+        include html/sections/portfolio.pug
+        include html/sections/geography.pug
+        include html/sections/digest.pug
+        include html/sections/work.pug
+        include html/sections/reviews.pug
         include html/sections/gratitude.pug
-        
+        include html/sections/feedback.pug
 
 
         //- .header__container
@@ -29,4 +29,4 @@ html(lang='ru')
         //- include html/components/title.pug
         //- include html/components/enumeration.pug
         //- include html/components/carousel-title.pug
-      footer.footer 
+      include html/common/_footer.pug

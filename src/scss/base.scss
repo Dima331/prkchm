@@ -6,7 +6,7 @@
 // @import "base/popup";
 
 // Стили спойлеров
-// @import "base/spollers";
+@import "base/spollers";
 
 // Стили табов
 // @import "base/tabs";
@@ -64,6 +64,7 @@
 @import "sections/work";
 @import "sections/reviews";
 @import "sections/gratitude";
+@import "sections/feedback";
 
 [class*="-ibg"] {
 	position: relative;
