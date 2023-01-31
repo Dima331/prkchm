@@ -29,10 +29,10 @@ section.feedback
             input(type="text" name="question" id="question" placeholder="Введите вопрос" required).form__input.form__input_question
             span.form__text Задайте свой вопрос
           label(for="file").form__file.file-form
-            input(autocomplete='off' accept='.jpg, .png' multiple='' id='file' name='file' type='file' hidden).visually-hidden
-            .file-form__body 
+            input(accept='.jpg, .png' multiple='' id='file' name='file' type='file' hidden).visually-hidden
+            span.file-form__body 
               span.file-form__text Прикрепить файл
-              .file-form__icon 
+              span.file-form__icon 
       .feedback__footer 
         .feedback__social
           include ../components/social.pug
