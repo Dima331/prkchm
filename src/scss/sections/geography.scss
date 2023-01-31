@@ -43,7 +43,8 @@
   .geography__title {
     grid-area: title;
     padding-bottom: rem(30);
-    border-bottom: 1px solid $mainColor;
+    position: relative;
+    // border-bottom: 1px solid $mainColor;
   }
 
   .geography__map-ibg {
@@ -137,8 +138,8 @@
 }
 
 .point_one {
-  left: 23.2%;
-  top: 44%;
+  left: 23.1%;
+  top: 44.1%;
 }
 
 .point_two {
@@ -156,5 +157,106 @@
 
   .point__dot {
     left: 44px;
+  }
+}
+
+.point_fore {
+  left: -4.6%;
+  top: 46%;
+
+  .point__dot {
+    left: 94px;
+    top: 44px;
+  }
+}
+
+.point_five {
+  left: 7.1%;
+  top: 44.5%;
+
+  .point__dot {
+    left: 92px;
+  }
+}
+
+.point_seven {
+  left: 31.2%;
+  top: 38.4%;
+
+  .point__dot {
+    left: 39px;
+  }
+}
+
+.point_six {
+  left: 21%;
+  top: 48.4%;
+
+  .point__dot {
+    left: 38px;
+    top: 43px;
+  }
+}
+
+.point_eight {
+  left: 39.2%;
+  top: 12%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_nine {
+  top: 34%;
+  left: 39.2%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_ten {
+  left: 44%;
+  top: 38%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_eleven {
+  left: 50.9%;
+  top: 48%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_twenty {
+  left: 41.1%;
+  top: 48%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_thirteen {
+  left: 63.5%;
+  top: 30%;
+
+  .point__dot {
+    left: 31px;
+  }
+}
+
+.point_fourteen {
+  left: 83.2%;
+  top: 38.1%;
+
+  .point__dot {
+    left: 31px;
   }
 }

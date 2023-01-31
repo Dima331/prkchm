@@ -2,7 +2,7 @@
 html(lang='ru')
   - var title = "пркчм";
   include html/common/_head.pug 
-  body(data-simplebar)
+  body(data-simplebar='')
     .wrapper
       include html/common/_header.pug
       main.page 
@@ -24,9 +24,10 @@ html(lang='ru')
         //- .header__container
         //- include html/components/thought.pug
         //- include html/components/spring.pug
-        //- include html/components/button.pug
         //- include html/components/tip.pug
+        //- include html/components/button.pug
         //- include html/components/title.pug
         //- include html/components/enumeration.pug
         //- include html/components/carousel-title.pug
       include html/common/_footer.pug
+    include html/common/_modal.pug

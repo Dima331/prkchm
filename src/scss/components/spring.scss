@@ -3,7 +3,8 @@
   height: 100%;
   width: 100%;
 
-  @media (max-width: em(1246)) { ///
+  @media (max-width: em(1246)) {
+    ///
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,12 +43,35 @@
     width: 100%;
     height: 100%;
     border: rem(1) solid $mainColor;
-    bottom: rem(-35);
     border-radius: 50%;
+    // bottom: rem(-35);
+
   }
 
-  &::before {
-    bottom: rem(-73);
+  ///
+  // &::after{
+  //   bottom: rem(0);
+  //   animation: show-one 2s both;
+  //   animation-timing-function: ease-in-out;
+  // }
+  // &::before {
+  //   bottom: rem(0);
+  //   animation: show-two 2s both;
+  //   animation-timing-function: ease-in-out;
+  // }
+  ///
+  &._watcher-view {
+    &::after {
+      bottom: rem(0);
+      animation: show-one 2s both;
+      animation-timing-function: ease-in-out;
+    }
+
+    &::before {
+      bottom: rem(0);
+      animation: show-two 2s both;
+      animation-timing-function: ease-in-out;
+    }
   }
 
   .spring__text {
@@ -60,6 +84,28 @@
     }
   }
 }
+
+@keyframes show-one {
+  0% {
+    bottom: rem(0);
+  }
+
+  100% {
+    bottom: rem(-35);
+  }
+}
+
+@keyframes show-two {
+  0% {
+    bottom: rem(0);
+  }
+
+  100% {
+    bottom: rem(-73);
+  }
+}
+
+
 
 .spring__link {
   width: rem(34);
@@ -134,7 +180,7 @@
     &:before {
       color: $extraColor;
       counter-increment: item;
-      content: "0" counter(item)".";
+      content: "0"counter(item)".";
       margin-bottom: rem(10);
       line-height: 1;
     }
@@ -155,12 +201,39 @@
       bottom: auto;
     }
 
-    &::after {
-      top: rem(-30);
-    }
+    &._watcher-view {
+      &::after {
+        top: rem(0);
+        animation: point-one 2s both;
+        animation-timing-function: ease-in-out;
+      }
 
-    &::before {
-      top: rem(-60);
+      &::before {
+        top: rem(0);
+        animation: poit-two 2s both;
+        animation-timing-function: ease-in-out;
+      }
     }
+  }
+}
+
+
+@keyframes point-one {
+  0% {
+    top: rem(0);
+  }
+
+  100% {
+    top: rem(-30);
+  }
+}
+
+@keyframes poit-two {
+  0% {
+    top: rem(0);
+  }
+
+  100% {
+    top: rem(-60);
   }
 }

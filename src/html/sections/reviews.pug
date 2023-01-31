@@ -1,12 +1,13 @@
 section.reviews
   .reviews__container
     .reviews__spring.spring 
-      .spring__body
+      .spring__body(data-watch-threshold="0.5" data-watch-once data-watch) 
         .spring__content
           p.spring__text Эмоциональные #[br] отзывы наших #[br] клиентов
           a(href="#").spring__link
     .reviews__main
       h2.reviews__title.section-title Отзывы
+        span.line.line_13
       .reviews__slider.swiper
         ul.reviews__wrapper.swiper-wrapper
           li.reviews__slide.swiper-slide.review-slide

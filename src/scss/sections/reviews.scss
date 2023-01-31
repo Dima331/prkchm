@@ -58,7 +58,8 @@
 
 .reviews__title {
   padding-bottom: rem(40);
-  border-bottom: 1px solid $mainColor;
+  // border-bottom: 1px solid $mainColor;
+  position: relative;
 }
 
 .reviews__slide {

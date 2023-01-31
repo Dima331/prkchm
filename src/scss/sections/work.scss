@@ -57,12 +57,13 @@
 .work__item {
   padding-top: rem(20);
   padding-bottom: rem(30);
-  border-bottom: 1px solid $mainColor;
+  // border-bottom: 1px solid $mainColor;
   display: flex;
   align-items: center;
   gap: rem(32);
   @include adaptiveValue("padding-bottom", 50, 30);
   padding-right: rem(10);
+  position: relative;
 
   @media (max-width:$mobileSmall) {
     flex-direction: column;

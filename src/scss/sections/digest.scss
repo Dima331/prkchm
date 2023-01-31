@@ -50,7 +50,8 @@
     grid-area: text;
     padding-top: rem(50);
     padding-bottom: rem(40);
-    border-top: 1px solid $mainColor;
+    // border-top: 1px solid $mainColor;
+    position: relative;
 
     p {
       margin-bottom: rem(15);
@@ -110,6 +111,8 @@
     flex-direction: row;
     align-items: flex-start;
     gap: rem(45);
+    position: relative;
+    padding-top: 45px;
 
     @media (max-width: em(830)) {
       flex-direction: column;
@@ -148,6 +151,7 @@
     grid-auto-flow: column;
     gap: rem(10);
     column-gap: rem(40);
+    position: relative;
 
     @media (max-width:$mobileSmall) {
       grid-template-columns: auto;

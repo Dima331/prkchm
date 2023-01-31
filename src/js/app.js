@@ -1,3 +1,185 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".line_1", {
+  scrollTrigger: {
+    trigger: ".line_1",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_2", {
+  scrollTrigger: {
+    trigger: ".line_2",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_3", {
+  scrollTrigger: {
+    trigger: ".line_3",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_4", {
+  scrollTrigger: {
+    trigger: ".line_4",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_5", {
+  scrollTrigger: {
+    trigger: ".line_5",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_6", {
+  scrollTrigger: {
+    trigger: ".line_6",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_7", {
+  scrollTrigger: {
+    trigger: ".line_7",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_8", {
+  scrollTrigger: {
+    trigger: ".line_8",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_9", {
+  scrollTrigger: {
+    trigger: ".line_9",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_10", {
+  scrollTrigger: {
+    trigger: ".line_10",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_11", {
+  scrollTrigger: {
+    trigger: ".line_11",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_12", {
+  scrollTrigger: {
+    trigger: ".line_12",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+gsap.from(".line_13", {
+  scrollTrigger: {
+    trigger: ".line_13",
+    scrub: true,
+    start: "top bottom",
+    end: "+=70%"
+  },
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "none"
+});
+
+// gsap.from(".line_14", {
+//   scrollTrigger: {
+//     trigger: ".line_14",
+//     scrub: true,
+//     start: "top bottom",
+//     end: "+=70%"
+//   },
+//   scaleX: 0,
+//   transformOrigin: "left center",
+//   ease: "none"
+// });
+
+
+
+
+
+
+
+
+
+
 /*
 (i) Код попадает в итоговый файл,
 только когда вызвана функция,
@@ -74,7 +256,7 @@ flsFunctions.spollers();
 Документация: https://template.fls.guru/template-docs/funkcional-popup.html
 Сниппет (HTML): pl
 */
-// import './libs/popup.js'
+import './libs/popup.js'
 
 /*
 Модуль паралаксу мишею
@@ -159,7 +341,7 @@ import "./files/sliders.js";
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
 Сниппет(HTML): 
 */
-import './files/scroll/simplebar.js';
+// import './files/scroll/simplebar.js';
 
 // Ленивая (отложенная) загрузка картинок
 // Документация по работе в шаблоне: https://template.fls.guru/template-docs/modul-lenivaya-podgruzka-lazy-loading.html
@@ -170,7 +352,7 @@ import './files/scroll/simplebar.js';
 // Наблюдатель за объектами c атрибутом data-watch
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Модуль поекранної прокрутки
 // Документація: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
@@ -227,3 +409,7 @@ import "./libs/dynamic_adapt.js";
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
+
+
+
+

@@ -1,5 +1,4 @@
 -var type= 'feedback'
-
 section.feedback
   .feedback__container
     h2.feedback__title.section-title Расскажите нам о своём бизнесе
@@ -34,15 +33,12 @@ section.feedback
             .file-form__body 
               span.file-form__text Прикрепить файл
               .file-form__icon 
-
-
-
       .feedback__footer 
         .feedback__social
           include ../components/social.pug
           .feedback__tip
             p Если у вас срочный вопрос, вы можете  написать нам в мессенджерах
         .feedback__submit
-          button(type="submit").button.feedback__btn Отправить заявку
+          button(type="submit" data-popup="#popup").button.feedback__btn Отправить заявку
           .feedback__agreement
             p Нажимая на кнопку «Отправить заявку» я соглашаюсь на обработку персональных данных
