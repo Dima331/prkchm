@@ -4,7 +4,6 @@
   width: 100%;
 
   @media (max-width: em(1246)) {
-    ///
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,22 +43,8 @@
     height: 100%;
     border: rem(1) solid $mainColor;
     border-radius: 50%;
-    // bottom: rem(-35);
-
   }
 
-  ///
-  // &::after{
-  //   bottom: rem(0);
-  //   animation: show-one 2s both;
-  //   animation-timing-function: ease-in-out;
-  // }
-  // &::before {
-  //   bottom: rem(0);
-  //   animation: show-two 2s both;
-  //   animation-timing-function: ease-in-out;
-  // }
-  ///
   &._watcher-view {
     &::after {
       bottom: rem(0);
@@ -105,8 +90,6 @@
   }
 }
 
-
-
 .spring__link {
   width: rem(34);
   height: rem(7);
@@ -117,7 +100,7 @@
 }
 
 .circle-point {
-  max-width: rem(800);
+  max-width: rem(804);
 
   @media (max-width: em(830)) {
     max-width: inherit;
@@ -133,16 +116,17 @@
 
   @media (max-width: em(830)) {
     grid-template-columns: 1fr;
-    grid-template-rows: 210px rem(70) 140px rem(70) 210px;
+    grid-template-rows: rem(225) rem(70) rem(155) rem(70) rem(210);
     padding-top: rem(74);
   }
 }
 
 .spring_point {
   padding-bottom: 0;
-  padding-top: rem(74);
-  width: rem(280);
-  height: rem(280);
+  padding-top: rem(60);
+
+  width: rem(282);
+  height: rem(282);
   box-sizing: content-box;
 
   &:nth-child(1) {

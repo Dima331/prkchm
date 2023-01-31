@@ -8,7 +8,16 @@
 
 .section-title_large {
     font-size: rem(54);
-    @include adaptiveValue("font-size", 81, 54);
+    white-space: nowrap;
+    @include adaptiveValue("font-size", 81.2, 57);
+
+    @media (max-width: em(1270)) {
+        white-space: normal;
+
+        br {
+            display: none;
+        }
+    }
 
     @media (max-width: em(830)) {
         text-align: center;

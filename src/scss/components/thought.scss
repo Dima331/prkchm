@@ -22,13 +22,13 @@
 .thought__icon {
   font-size: rem(66);
   color: $extraColor;
-  margin-right: rem(20);
+  margin-right: rem(16);
   display: flex;
   line-height: 0.8;
   padding-top: rem(2);
   justify-content: center;
   font-weight: 700;
-  @include adaptiveValue("margin-right", 24, 16);
+  @include adaptiveValue("margin-right", 40, 16);
 
 }
 
@@ -51,18 +51,13 @@
 
 .thought_small {
   max-width: rem(253);
-  padding: rem(20) rem(20);
+  padding: rem(14) rem(14);
   line-height: 125%;
-  @include adaptiveValue("padding", 17, 15);
-
-  // @media (max-width: em(830)) {
-  //   padding: rem(20) rem(30);
-
-  //   &::after {
-  //     left: 50%;
-  //     transform: translateX(-50%);
-  //   }
-  // }
+  @include adaptiveValue("padding-top", 17, 14);
+  @include adaptiveValue("padding-bottom", 17, 14);
+  @include adaptiveValue("padding-left", 14, 14);
+  @include adaptiveValue("padding-rigt", 14, 14);
+  letter-spacing: 1px;
 
   @media (max-width: $mobile) {
     br {
@@ -73,7 +68,7 @@
 
 .thought_center {
   @media (max-width: em(830)) {
-    padding: rem(25) rem(32);
+    padding: rem(22) rem(32);
 
     &::after {
       left: 50%;

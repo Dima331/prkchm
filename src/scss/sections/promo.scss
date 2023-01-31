@@ -7,10 +7,12 @@
       'pic circles'
       'pic enumeration'
     ;
-    padding: rem(65) rem(15);
+    padding: rem(62) rem(15);
     gap: 32px;
+    row-gap: 0;
+    grid-template-columns: minmax(383px, 1fr) 1fr;
 
-    @media (max-width: em(1246)) {
+    @media (max-width: em(1270)) {
       grid-template-areas:
         'pic tip'
         'pic title'
@@ -19,7 +21,7 @@
       ;
       grid-template-columns: minmax(383px, 1fr) 1fr;
       grid-template-rows: auto 1fr auto auto;
-      gap: 28px;
+      // gap: 28px;
     }
 
     @media (max-width: em(830)) {
@@ -40,12 +42,23 @@
 
   .promo__tip {
     display: flex;
-    padding-top: 46px;
+    padding-top: 56px;
     grid-area: pic;
     justify-self: self-end;
 
+    transform: translateX(-60px);
+
+    @media (max-width: em(1330)) {
+      transform: translateX(0);
+    }
+
     @media (max-width: em(830)) {
       justify-self: center;
+
+    }
+
+    @media (max-width:$mobileSmall) {
+      width: 89%;
     }
   }
 
@@ -56,13 +69,22 @@
     &::before {
       content: '';
       position: absolute;
-      top: -50px;
+      top: -56px;
       left: 50%;
       margin-left: -91.5px;
       width: rem(183);
       height: rem(183);
       background: url('@img/promo/perfect.svg') 0 0 no-repeat;
       animation: rotating 35s linear infinite;
+
+      @media (max-width: em(830)) {
+        width: rem(142);
+        height: rem(142);
+        background-size: cover;
+        top: rem(-47);
+        transform: translateX(-50%);
+        margin-left: rem(-71);
+      }
     }
 
     img {
@@ -78,15 +100,38 @@
 
   .promo__thought {
     grid-area: tip;
+    margin-bottom: rem(54);
+
+    @media (max-width: em(1270)) {
+      margin-bottom: rem(30);
+      @include adaptiveValue("margin-bottom", 54, 38);
+    }
   }
 
   .promo__section-title {
     grid-area: title;
+    margin-bottom: rem(39);
+
+    @media (max-width: em(830)) {
+      margin-bottom: rem(40);
+      @include adaptiveValue("margin-bottom", 54, 24);
+    }
   }
 
   .promo__circle-point {
     grid-area: circles;
-    justify-self: center;
+    margin-bottom: rem(61);
+
+    @media (max-width: em(1270)) {
+      justify-self: center;
+      margin-top: rem(60);
+      margin-bottom: rem(70);
+      @include adaptiveValue("margin-bottom", 80, 72);
+    }
+
+    @media (max-width: em(830)) {
+      margin-top: rem(7);
+    }
   }
 
   .promo__enumeration {
