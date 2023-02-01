@@ -1,12 +1,14 @@
 .services {
   padding: rem(50) 0;
+
   @media (max-width: em(830)) {
     padding: rem(25) 0;
   }
 }
 
 .services__container {
-  padding: rem(52) 0;
+  padding: rem(52) 0 0;
+
   @media (max-width: em(830)) {
     padding: 0;
   }
@@ -69,6 +71,7 @@
       'seven'
     ;
     padding: rem(42) 0 rem(60);
+
     &:after {
       width: rem(400);
 
@@ -88,12 +91,12 @@
 }
 
 $nums: one,
-  two,
-  three,
-  four,
-  five,
-  six,
-  seven;
+two,
+three,
+four,
+five,
+six,
+seven;
 
 .services__item {
   width: rem(385);
@@ -170,7 +173,10 @@ $nums: one,
       grid-area: $num;
     }
   }
-  &._watcher-view {  animation: size-circle 1s both;}
+
+  &._watcher-view {
+    animation: size-circle 1s both;
+  }
 }
 
 .service__item {
@@ -233,9 +239,11 @@ $nums: one,
   @include adaptiveValue("font-size", 50, 26);
   @include adaptiveValue("width", 600, 290, 1216, 320);
   width: 290px;
+
   p {
     opacity: 0;
   }
+
   &._watcher-view {
     p {
 
@@ -267,7 +275,7 @@ $nums: one,
         // transform: translateX(-70px);
         animation: line_fore 2s both;
         animation-delay: 0.6s;
- 
+
       }
     }
   }

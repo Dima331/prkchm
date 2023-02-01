@@ -2,20 +2,29 @@
   padding: rem(80) 0;
 
   .portfolio__item {
-    padding: rem(30) 0;
+    padding: rem(33) 0;
+    @include adaptiveValue("padding-top", 33, 27);
+    @include adaptiveValue("padding-bottom", 33, 27);
+
+    &:first-of-type {
+      padding: rem(40) 0 rem(33);
+      @include adaptiveValue("padding-top", 40, 18);
+
+    }
   }
 
   .portfolio__header {
-    margin-bottom: rem(30);
+    margin-bottom: rem(25);
 
     @media (max-width: em(1246)) {
       width: rem(800);
-      margin: 0 auto rem(30);
+      margin: 0 auto rem(25);
     }
 
     @media (max-width: em(830)) {
       width: 100%;
-      margin-bottom: rem(0);
+      margin-bottom: rem(4);
+
     }
   }
 
@@ -26,7 +35,7 @@
       'title slider'
       'btn slider'
     ;
-    grid-template-columns: rem(383) 1fr;
+    grid-template-columns: rem(391) 1fr;
     grid-template-rows: 1fr auto;
     justify-items: start;
     gap: rem(25);
@@ -40,6 +49,7 @@
       ;
       grid-template-columns: 1fr minmax(rem(300), rem(800)) 1fr;
       align-items: center;
+      gap: rem(22);
     }
 
     @media (max-width: em(830)) {
@@ -57,15 +67,18 @@
     grid-area: title;
     z-index: 10;
     background-color: $extraColor;
+    margin-top: -6px;
 
     @media (max-width: em(830)) {
       max-width: rem(200);
+      margin-top: 0;
     }
   }
 
   .portfolio__button {
     grid-area: btn;
     z-index: 10;
+    margin-bottom: -12px;
 
 
     @media (max-width:$mobileSmall) {
@@ -108,7 +121,11 @@
 
   .portfolio__slide {
     padding: rem(15);
-    @include adaptiveValue("padding", 50, 15);
+    // padding: 42px 39px 44px 50px;
+    @include adaptiveValue("padding-top", 42, 15);
+    @include adaptiveValue("padding-bottom", 44, 15);
+    @include adaptiveValue("padding-left", 50, 15);
+    @include adaptiveValue("padding-right", 39, 15);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/1.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -140,6 +157,10 @@
     max-width: rem(340);
     font-size: rem(14);
     @include adaptiveValue("font-size", 18, 14);
+
+    @media (max-width: em(830)) {
+      line-height: 1.2;
+    }
   }
 
   .portfolio__link {
