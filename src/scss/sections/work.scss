@@ -9,7 +9,10 @@
     'edge footer'
   ;
   gap: rem(32);
+  row-gap: rem(45);
   grid-template-columns: minmax(200px, 383px) 1fr;
+  padding-top: rem(42);
+  padding-bottom: rem(42);
 
   @media (max-width: em(1246)) {
     grid-template-areas:
@@ -19,7 +22,8 @@
     ;
     grid-template-columns: 1fr minmax(500px, 800px) 1fr;
     justify-content: center;
-    gap: rem(28);
+    gap: rem(0);
+    row-gap: rem(45);
   }
 
   @media (max-width: em(830)) {
@@ -30,6 +34,9 @@
     ;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    gap: 42px;
   }
 }
 
@@ -59,19 +66,21 @@
   padding-bottom: rem(30);
   // border-bottom: 1px solid $mainColor;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: rem(32);
-  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-bottom", 39, 30);
   padding-right: rem(10);
   position: relative;
 
-  @media (max-width:$mobileSmall) {
+  @media (max-width: em(600)) {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
     padding-left: rem(53);
-    @include adaptiveValue("padding-left", 62, 53);
+    @include adaptiveValue("padding-left", 62, 38);
     position: relative;
+    padding-bottom: rem(22);
+    padding-top: rem(27);
   }
 
   &:first-child {
@@ -79,7 +88,13 @@
   }
 
   .work__text {
-    @media (max-width:$mobileSmall) {
+    padding-top: rem(17);
+
+    @media (max-width: em(830)) {
+      padding-top: rem(0);
+    }
+
+    @media (max-width: em(600)) {
       br {
         display: none;
       }
@@ -93,7 +108,7 @@
     flex-shrink: 0;
     @include adaptiveValue("flex-basis", 282, 250);
 
-    @media (max-width:$mobileSmall) {
+    @media (max-width: em(600)) {
       flex-basis: auto;
     }
 
@@ -122,6 +137,10 @@
         margin-right: rem(0);
         left: 0;
       }
+    }
+
+    @media (max-width: em(830)) {
+      // left: -5px;
     }
   }
 }
