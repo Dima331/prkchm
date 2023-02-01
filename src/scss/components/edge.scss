@@ -8,10 +8,15 @@
         background-image: url('@img/subtract.svg');
         background-position: left;
         background-repeat: no-repeat;
-        @include adaptiveValue("margin-right", 34, 14);
+        @include adaptiveValue("margin-right", 29, 14);
         margin-right: rem(14);
-        @include adaptiveValue("width", 40, 24);
-        @include adaptiveValue("height", 50, 40);
+        @include adaptiveValue("width", 40, 10);
+        @include adaptiveValue("height", 50, 32);
+
+        @media (max-width: em(830)) {
+            background-size: contain;
+            background-position: right;
+        }
     }
 
     .edge__text {
@@ -20,5 +25,9 @@
         margin-top: rem(-2);
         @include adaptiveValue("font-size", 18, 16);
         font-size: rem(16);
+
+        @media (max-width: em(830)) {
+            line-height: 1.45;
+        }
     }
 }

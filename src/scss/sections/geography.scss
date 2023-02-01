@@ -1,6 +1,10 @@
 .geography {
   padding: rem(60) 0;
 
+  @media (max-width: em(830)) {
+    padding: rem(30) 0;
+  }
+
   .geography__container {
     display: grid;
     grid-template-areas:
@@ -18,9 +22,7 @@
         '. map . '
       ;
       grid-template-columns: 1fr minmax(500px, 800px) 1fr;
-
-
-      row-gap: rem(28);
+      row-gap: rem(42);
       column-gap: rem(0);
     }
 
@@ -32,7 +34,7 @@
       ;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-      padding: rem(30) rem(15);
+      row-gap: rem(30);
     }
   }
 
@@ -42,9 +44,12 @@
 
   .geography__title {
     grid-area: title;
-    padding-bottom: rem(30);
+    padding-bottom: rem(38);
     position: relative;
-    // border-bottom: 1px solid $mainColor;
+
+    @media (max-width: em(830)) {
+      padding-bottom: rem(28);
+    }
   }
 
   .geography__map-ibg {

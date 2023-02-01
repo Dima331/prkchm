@@ -1,5 +1,9 @@
 .portfolio {
-  padding: rem(80) 0;
+  padding: rem(80) 0 rem(40);
+
+  @media (max-width: em(830)) {
+    padding: rem(60) 0 rem(20);
+  }
 
   .portfolio__item {
     padding: rem(33) 0;
