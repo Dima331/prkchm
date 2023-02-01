@@ -186,3 +186,29 @@
 
   .portfolio__link {}
 }
+
+.swiper.portfolio__slider_one{
+  .portfolio__slide{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/1.png')
+  }
+}
+.portfolio__slider_two{
+  .portfolio__slide{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/2.png');
+  }
+}
+.portfolio__slider_three{
+  .portfolio__slide{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/3.png');
+  }
+}
+.portfolio__slider_four{
+  .portfolio__slide{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/4.png');
+  }
+}
+.portfolio__slider_five{
+  .portfolio__slide{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('@img/portfolio/5.png');
+  }
+}

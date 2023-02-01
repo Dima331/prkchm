@@ -8,6 +8,12 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
+input, textarea, select {
+	-webkit-appearance: none;
+	border: none;
+}
+
 .input {
 	border-radius: 0 !important;
 	width: 100%;

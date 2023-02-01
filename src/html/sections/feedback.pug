@@ -34,7 +34,24 @@ section.feedback
               span.file-form__icon 
       .feedback__footer 
         .feedback__social
-          include ../components/social.pug
+          ul.social.social_feedback
+            li.social__item   
+              a(href="#" aria-label="телеграмм").social__link 
+                svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none")
+                  g(clip-path="url(#a)")
+                    path(stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4")
+                      defs
+                        clippath#a
+                          path(fill="#fff" d="M0 0h24v24H0z")
+            li.social__item   
+              a(href="#" aria-label="ватсап").social__link 
+                svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none')
+                  g(stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(#a)')
+                    path(d='m3 21 1.65-3.8a9 9 0 1 1 3.4 2.9L3 21')
+                    path(d='M9 10a.5.5 0 0 0 1 0V9a.5.5 0 1 0-1 0v1Zm0 0a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1')
+                  defs
+                    clippath#a
+                      path(fill='#fff' d='M0 0h24v24H0z')
           .feedback__tip
             p Если у вас срочный вопрос, вы можете  написать нам в мессенджерах
         .feedback__submit

@@ -107,5 +107,6 @@
 
 .gratitude__slide__img {
     height: 300px;
+    width: 100%;
     @include adaptiveValue("height", 544, 420);
 }

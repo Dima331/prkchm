@@ -4,7 +4,7 @@ header.header
   .header__container
     .header__body 
       .header__logo.logo 
-        a(href="#").logo__link
+        a(href="#" aria-label="Логотип компании").logo__link
           svg(xmlns='http://www.w3.org/2000/svg' width='74' height='25' fill='none')
             path(fill='#000' d='M0 0h74v24.377H0z')
             path(fill='#fff' d='M16.047 5.621V18h-2.55V7.62H8.522V18H5.972V5.621h10.075Zm7.57 7.966h-3.154v-1.989h3.154c.488 0 .884-.08 1.19-.238.306-.164.53-.391.672-.68.142-.29.213-.615.213-.978 0-.368-.071-.711-.213-1.029a1.717 1.717 0 0 0-.672-.765c-.306-.192-.702-.289-1.19-.289h-2.27V18h-2.55V5.621h4.82c.97 0 1.8.176 2.491.527.697.346 1.23.825 1.598 1.437.369.612.553 1.312.553 2.1 0 .8-.184 1.49-.553 2.075-.368.583-.9 1.034-1.598 1.351-.691.318-1.522.476-2.49.476ZM33.1 5.622V18h-2.55V5.621h2.55Zm7.295 0-4.744 7.27h-3.12l-.323-2.27h2.083l3.01-5h3.094ZM37.768 18l-3.469-5.535 1.769-1.82L40.794 18h-3.027Zm4.629-12.379h2.559v3.8c0 .545.082.97.246 1.276.17.306.425.521.765.646.346.12.774.179 1.284.179a14.115 14.115 0 0 0 1.496-.102c.278-.04.545-.083.8-.128a4.38 4.38 0 0 0 .637-.17v1.99a5.42 5.42 0 0 1-.637.161 14.67 14.67 0 0 1-.8.136 14.115 14.115 0 0 1-1.496.102c-.986 0-1.842-.142-2.567-.425-.726-.284-1.29-.726-1.692-1.326-.397-.607-.595-1.386-.595-2.338v-3.8Zm7.252 0h2.55V18h-2.55V5.621Zm6.448 0h2.16l3.179 9.089 3.18-9.089h2.16L62.302 18H60.57L56.097 5.621Zm-1.165 0h2.151l.391 8.86V18h-2.542V5.621Zm10.857 0h2.16V18h-2.551v-3.52l.39-8.859Z')
@@ -21,10 +21,27 @@ header.header
               li.menu__item
                 a.menu__link(href='#') Контакты
       .header__contacts(data-da=".menu__nav,479.98")
-        include ../components/social.pug
+        ul.social.social_header
+          li.social__item   
+            a(href="#" aria-label="телеграмм").social__link 
+              svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none")
+                g(clip-path="url(#a)")
+                  path(stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4")
+                    defs
+                      clippath#a
+                        path(fill="#fff" d="M0 0h24v24H0z")
+          li.social__item   
+            a(href="#" aria-label="ватсап").social__link 
+              svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none')
+                g(stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(#a)')
+                  path(d='m3 21 1.65-3.8a9 9 0 1 1 3.4 2.9L3 21')
+                  path(d='M9 10a.5.5 0 0 0 1 0V9a.5.5 0 1 0-1 0v1Zm0 0a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1')
+                defs
+                  clippath#a
+                    path(fill='#fff' d='M0 0h24v24H0z')
         .header__number.number 
           a(href="tel:99999999").number__link +7 (495) 999 99 99
-      button.header__icon.icon-menu(type='button')
+      button.header__icon.icon-menu(type='button' aria-label="меню бургер")
         span
 
 
