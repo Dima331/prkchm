@@ -1,6 +1,10 @@
 .reviews {
   padding: rem(60) 0;
 
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
+
   .reviews__container {
     display: grid;
     grid-template-areas:
@@ -38,6 +42,14 @@
 .reviews__spring {
   grid-area: spring;
 
+  .spring__content {
+    padding-bottom: 0;
+  }
+
+  .spring__text:not(:last-child) {
+    margin: 0;
+  }
+
   @media (max-width: em(555)) {
     display: none;
   }
@@ -49,17 +61,25 @@
 
 .reviews__wrapper {
   padding-top: rem(45);
+
+  @media (max-width: em(830)) {
+    padding-top: rem(29);
+  }
 }
 
-.review-slide__body {
-  padding-bottom: rem(45);
+// .review-slide__body {
+//   padding-bottom: rem(58);
 
-}
+// }
 
 .reviews__title {
-  padding-bottom: rem(40);
+  padding-bottom: rem(37);
   // border-bottom: 1px solid $mainColor;
   position: relative;
+
+  @media (max-width: em(830)) {
+    padding-bottom: rem(24);
+  }
 }
 
 .reviews__slide {
@@ -70,7 +90,13 @@
 
 .review-slide__body {
   display: flex;
-  gap: rem(32);
+  gap: rem(20);
+  @include adaptiveValue("gap", 83, 20);
+  padding-bottom: rem(58);
+
+  @media (max-width: em(830)) {
+    padding-bottom: rem(29);
+  }
 
   @media (max-width: em(555)) {
     flex-direction: column;
@@ -79,6 +105,20 @@
 
 .review-slide__footer {
   margin-top: auto;
+
+  .slider-navigation__text {
+
+    @media (max-width: em(555)) {
+      max-width: 127px;
+      padding: 4px 16px 4px;
+      line-height: 1.2;
+    }
+
+  }
+
+  .slider-navigation__panel {
+    gap: rem(17);
+  }
 }
 
 .review-slide__info {
@@ -92,12 +132,14 @@
 .review-slide__name {
   font-weight: 700;
   text-transform: uppercase;
-
+  margin-bottom: 14px;
 }
 
 .review-slide__text {
+  padding-right: 10px;
+
   p {
-    margin-bottom: rem(10);
+    margin-bottom: rem(17);
 
     &:last-of-type {
       margin-bottom: 0;

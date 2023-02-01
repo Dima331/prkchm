@@ -34,7 +34,7 @@
 
 .social_feedback {
   gap: rem(5);
-  @include adaptiveValue("gap", 12, 5);
+  @include adaptiveValue("gap", 17, 5);
 
   .social__link {
     width: 58px;

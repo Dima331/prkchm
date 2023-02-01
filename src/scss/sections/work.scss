@@ -1,5 +1,9 @@
 .work {
   padding: rem(60) 0;
+
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
 }
 
 .work__container {

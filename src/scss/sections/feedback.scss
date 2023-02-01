@@ -1,5 +1,8 @@
 .feedback {
   padding: rem(60) 0;
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
 }
 
 .feedback__container {
@@ -21,7 +24,8 @@
     ;
     grid-template-columns: 1fr minmax(500px, 800px) 1fr;
     justify-content: center;
-    gap: rem(28);
+    row-gap: rem(28);
+    column-gap: 0;
   }
 
   @media (max-width: em(830)) {
@@ -46,10 +50,14 @@
 
 .feedback__pic {
   grid-area: pic;
-  margin-top: rem(-30);
+  padding: 20px 0;
 
   @media (max-width: em(1246)) {
     margin-top: rem(0);
+  }
+  @media (max-width: em(830)) {
+    padding: 0;
+    padding-bottom: 35px;
   }
 }
 
@@ -57,7 +65,14 @@
   grid-area: form;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 43px;
+  padding-top: 40px;
+  @media (max-width: em(1246)) {
+    padding-top: 0;
+  }
+  @media (max-width: em(680)) {
+  gap: 23px;
+  }
 }
 
 .feedback__footer {
@@ -68,6 +83,7 @@
 
   @media (max-width: em(680)) {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .feedback__social {
@@ -128,6 +144,10 @@
 
   .feedback__img_contain {
     object-fit: contain;
+    object-position: left;
+    @media (max-width: em(1246)) {
+      object-position: center;
+    }
   }
 }
 
@@ -137,7 +157,7 @@
   .form__inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
   }
 
   .form__label {
@@ -156,6 +176,7 @@
 
   .form__input {
     padding: 10px 0;
+    padding: 10px 0 20px;
 
     &::placeholder {
       color: rgba($color: $mainColor, $alpha: 0.3);
