@@ -1,5 +1,8 @@
 .provocation {
-  padding: rem(50) 0;
+  padding: rem(75) 0;
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
 
   .provocation__slider {
     position: relative;
@@ -50,7 +53,10 @@
   }
 
   .provocation__thought {
-    margin-bottom: rem(80);
+    margin-bottom: rem(50);
+    @media (max-width: em(830)) {
+      margin-bottom: rem(26);
+    }
   }
 
 
@@ -60,7 +66,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: rem(50);
+    gap: rem(40);
 
     @media (max-width: em(830)) {
       flex-direction: column;
@@ -91,12 +97,12 @@
     'pic text'
     'pic footer'
   ;
-  gap: rem(32);
+  column-gap: rem(32);
   grid-template-columns: minmax(rem(200), rem(383)) 1fr;
-  grid-template-rows: auto minmax(rem(238), auto) 1fr;
+  grid-template-rows: auto minmax(rem(220), auto) 1fr;
   min-height: rem(400);
-  margin-bottom: rem(50);
-
+  // margin-bottom: rem(50);
+  padding-top: 20px;
   @media (max-width: em(1246)) {
     grid-template-areas:
       '. title .'
@@ -118,16 +124,23 @@
     ;
     grid-template-columns: 1fr;
     grid-template-rows: auto rem(280) auto auto;
+    padding-top: 0;
+    gap: rem(0);
   }
 
   .quiz-slide__img {
     grid-area: pic;
     width: 100%;
     max-height: rem(400);
+    margin-top: -20px;
+    @media (max-width: em(830)) {
+      margin-top: 0;
+    }
   }
 
   .quiz-slide__title {
     grid-area: title;
+    margin-bottom: 40px;
   }
 
   .quiz-slide__footer {
@@ -137,13 +150,17 @@
   .quiz-slide__list {
     grid-area: text;
     display: flex;
-    gap: rem(32);
+    gap: rem(18);
     flex-direction: column;
+    margin-bottom: 27px;
+    @media (max-width: em(830)) {
+      padding-top: 43px;
+    }
   }
 
   .quiz-slide__item {
     display: flex;
-    gap: rem(20);
+    gap: rem(14);
 
   }
 
@@ -165,7 +182,7 @@
   }
 
   .quiz-slide__footer {
-    gap: rem(50);
+    gap: rem(40);
     display: flex;
     flex-direction: column;
   }

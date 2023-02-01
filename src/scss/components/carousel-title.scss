@@ -1,6 +1,8 @@
 .carousel-title {
-    padding: rem(40) 0;
+    padding: rem(50) 0;
     border-top: 1px solid $mainColor;
+    @include adaptiveValue("padding-top", 50, 35);
+    @include adaptiveValue("padding-bottom", 50, 20);
 }
 
 .carousel-title__list {
@@ -35,7 +37,7 @@
     overflow: hidden;
     user-select: none;
     margin-bottom: rem(10);
-    @include adaptiveValue("margin-bottom", 40, 10);
+    @include adaptiveValue("margin-bottom", 30, 22);
 }
 
 .carousel-title__bottom {

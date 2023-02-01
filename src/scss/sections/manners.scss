@@ -7,11 +7,12 @@
       '. enumeration'
       '. tip'
     ;
-    padding: rem(35) rem(15);
+    padding: rem(45) rem(15);
     gap: 32px;
+    row-gap: 43px;
     grid-template-columns: minmax(200px, 383px) 1fr;
 
-    @media (max-width: em(1246)) {
+    @media (max-width: em(1270)) {
       grid-template-areas:
         '. thought .'
         '. title .'
@@ -21,7 +22,8 @@
       grid-template-columns: 1fr minmax(500px, 800px) 1fr;
 
       // grid-template-rows: auto 1fr auto auto;
-      gap: 28px;
+      gap: 0;
+      row-gap: 43px;
     }
 
     @media (max-width: em(830)) {
@@ -35,20 +37,27 @@
       grid-template-rows: auto;
       // align-items: center;
       // justify-items: center;
-      padding: rem(30) rem(15);
+      padding: rem(25) rem(15);
+      row-gap: 37px;
     }
   }
 
   .manners__thought {
     grid-area: thought;
+    @media (max-width: em(830)) {
+      // margin-bottom: 37px;
+      margin-bottom: 0;
+    }
   }
 
   .manners__title {
     grid-area: title;
+    // margin-bottom: 36px;
   }
 
   .manners__enumeration {
     grid-area: enumeration;
+    // margin-bottom: 38px;
   }
 
   .manners__tip {

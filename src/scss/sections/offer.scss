@@ -5,12 +5,12 @@
             'tip title'
             'tip list'
         ;
-        padding: rem(35) rem(15);
+        padding: rem(45) rem(15);
         gap: 32px;
         grid-template-columns: minmax(338px, 383px) 1fr;
         //   grid-template-columns: 1fr;
 
-        @media (max-width: em(1246)) {
+        @media (max-width: em(1270)) {
             grid-template-areas:
                 '. tip .'
                 '. title .'
@@ -29,7 +29,8 @@
             ;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            padding: rem(30) rem(15);
+            padding: rem(25) rem(15);
+            gap: 18px;
         }
     }
 
@@ -39,7 +40,10 @@
 
     .offer__title {
         grid-area: title;
-        padding-top: rem(40);
+        padding-top: rem(45);
+        @media (max-width: em(830)) {
+            padding-top: rem(20); 
+        }
     }
 
     .offer__list {
@@ -47,7 +51,7 @@
     }
 
     .offer__item {
-        padding: rem(30) rem(80) rem(30) 0;
+        padding: rem(34) rem(70) rem(34) 0;
         // border-top: 1px solid $mainColor;
         display: flex;
         gap: 16px;
@@ -58,7 +62,8 @@
         // }
 
         @media (max-width: em(830)) {
-            padding: rem(30) 0 rem(30) 0;
+            padding: rem(34) 0 rem(34) 0;
+            
         }
 
         .offer__icon {

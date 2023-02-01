@@ -1,10 +1,16 @@
 .services {
-  padding: rem(150) 0;
+  padding: rem(50) 0;
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
 }
 
-// .services__container {
-//   position: relative;
-// }
+.services__container {
+  padding: rem(52) 0;
+  @media (max-width: em(830)) {
+    padding: 0;
+  }
+}
 
 .services__list {
   display: grid;
@@ -17,7 +23,9 @@
   justify-content: center;
   padding: rem(60) 0 rem(100);
   position: relative;
-  margin-bottom: rem(60);
+  margin-bottom: rem(40);
+  @include adaptiveValue("margin-bottom", 171, 20);
+  gap: rem(9.5);
 
   &:after {
     content: '';
@@ -28,7 +36,8 @@
     background-size: cover;
     background-position: center;
     position: absolute;
-    bottom: rem(-10);
+    bottom: rem(-25);
+    @include adaptiveValue("bottom", -76, -25);
   }
 
   @media (max-width: em(1246)) {
@@ -59,7 +68,7 @@
       'six'
       'seven'
     ;
-
+    padding: rem(42) 0 rem(60);
     &:after {
       width: rem(400);
 
@@ -70,8 +79,9 @@
     &:after {
       height: rem(20);
       bottom: 0;
-      width: rem(300);
-      background-image: url('@img/total-b.svg');
+      // background-size: initial;
+      // width: rem(100%);
+      background-image: url('@img/total.svg');
     }
   }
 
@@ -94,6 +104,7 @@ $nums: one,
   position: relative;
   color: $mainColor;
   transform: scale(0.9);
+
   @media (max-width: em(1246)) {
     width: rem(340);
     height: rem(333);
@@ -103,7 +114,8 @@ $nums: one,
   @media (max-width:$mobileSmall) {
     width: rem(338);
     height: rem(266);
-    padding: rem(50) 0 0 rem(81);
+    // padding: rem(50) 0 0 rem(81);
+    padding: rem(52) 0 0 rem(75);
   }
 
   &::after {
@@ -209,12 +221,13 @@ $nums: one,
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 49px;
+  // @include adaptiveValue("gap", 49, 26);
 }
 
 .services__tagline {
   font-size: rem(26);
-  line-height: 115%;
+  line-height: 100%;
   font-weight: 700;
   text-transform: uppercase;
   @include adaptiveValue("font-size", 50, 26);
@@ -242,7 +255,7 @@ $nums: one,
       }
 
       &:nth-child(3) {
-        margin-left: 20%;
+        margin-left: 18%;
         // transform: translateX(100px);
         animation: line_three 2s both;
         animation-delay: 0.4s;
@@ -250,7 +263,7 @@ $nums: one,
       }
 
       &:nth-child(4) {
-        margin-left: 30%;
+        margin-left: 35%;
         // transform: translateX(-70px);
         animation: line_fore 2s both;
         animation-delay: 0.6s;
@@ -327,7 +340,7 @@ $nums: one,
   }
 
   span {
-    padding: 0 0 30px;
+    padding: 0 0 19px;
     position: relative;
 
     &::before {
@@ -337,7 +350,7 @@ $nums: one,
       position: absolute;
       background-image: url('@img/arrow.svg');
       background-repeat: no-repeat;
-      bottom: 0;
+      bottom: -18px;
       left: 50%;
       transform: translateX(-50%) rotate(90deg);
     }
