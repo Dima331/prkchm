@@ -1,6 +1,10 @@
 .digest {
   padding: rem(60) 0;
 
+  @media (max-width: em(830)) {
+    padding: rem(25) 0;
+  }
+
   .digest__info {
     display: grid;
     grid-template-areas:
@@ -29,7 +33,7 @@
       ;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
-      // padding: rem(30) rem(15);
+      gap: rem(27);
     }
 
   }
@@ -38,11 +42,20 @@
     grid-area: edge;
     padding-right: rem(40);
     padding-top: rem(10);
+
+    @media (max-width: em(830)) {
+      padding-top: rem(0);
+    }
+
   }
 
   .digest__title {
     grid-area: title;
-    margin-bottom: rem(30);
+
+    @media (max-width: em(830)) {
+
+      margin-bottom: rem(0);
+    }
 
   }
 
@@ -50,7 +63,6 @@
     grid-area: text;
     padding-top: rem(50);
     padding-bottom: rem(40);
-    // border-top: 1px solid $mainColor;
     position: relative;
 
     p {
@@ -59,6 +71,11 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+
+    @media (max-width: em(830)) {
+      padding-top: rem(32);
+      padding-bottom: rem(60);
     }
   }
 
@@ -89,6 +106,8 @@
       ;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
+      gap: 0;
+
     }
   }
 
@@ -99,10 +118,22 @@
     @media (max-width: em(1246)) {
       margin-top: 0;
     }
+
+
+
+    .spring__content {
+      @media (max-width: em(830)) {
+        padding-bottom: 0;
+      }
+    }
   }
 
   .digest__analysis {
     grid-area: list;
+
+    @media (max-width: em(830)) {
+      margin-top: 60px;
+    }
   }
 
   .digest__footer {
@@ -116,6 +147,8 @@
 
     @media (max-width: em(830)) {
       flex-direction: column;
+
+      gap: rem(37);
     }
   }
 
@@ -137,7 +170,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $extraColor;
-    padding: rem(3) rem(10);
+    padding: rem(1) rem(16);
     background-color: $mainColor;
     display: inline-block;
     @include adaptiveValue("font-size", 18, 16);
@@ -150,8 +183,14 @@
     grid-template-rows: auto auto auto;
     grid-auto-flow: column;
     gap: rem(10);
-    column-gap: rem(40);
+    column-gap: rem(10);
+    @include adaptiveValue("column-gap", 170, 10);
     position: relative;
+
+    @media (max-width: em(830)) {
+      padding: rem(24) 0;
+      gap: rem(12);
+    }
 
     @media (max-width:$mobileSmall) {
       grid-template-columns: auto;
